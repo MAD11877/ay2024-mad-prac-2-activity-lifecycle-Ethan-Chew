@@ -1,7 +1,9 @@
 package sg.edu.np.mad.madpractical2;
 
 import android.os.Bundle;
+import android.view.textservice.TextInfo;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +12,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    private Button button1, button2, button3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,16 +22,18 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    }
 
-    public void addButtonListener() {
-        button1 = findViewById(R.id.button);
-    }
-}
+        // Initialise User Obj
+        User user = new User("John Doe", "MAD Developer", 1, false);
 
-class User {
-    String name;
-    String description;
-    int id;
-    boolean followed;
+        // Get Components from Layout
+        TextView tvName = findViewById(R.id.tvName);
+        TextView tvDescription = findViewById(R.id.tvDescription);
+        Button btnFollow = findViewById(R.id.btnFollow);
+
+        // Set Components with Values
+        tvName.setText(user.name);
+        tvDescription.setText(user.description);
+        btnFollow.setText("Follow");
+    }
 }

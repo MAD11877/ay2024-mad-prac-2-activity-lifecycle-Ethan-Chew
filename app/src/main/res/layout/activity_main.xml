@@ -35,7 +35,7 @@
         tools:layout_editor_absoluteX="141dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
@@ -47,7 +47,7 @@
         tools:layout_editor_absoluteX="108dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -57,11 +57,11 @@
         android:paddingBottom="10dp"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
         tools:layout_editor_absoluteX="0dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnFollow"
         android:layout_width="20mm"
         android:layout_height="8mm"
         android:text="FOLLOW"
@@ -79,7 +79,7 @@
         android:text="MESSAGE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/btnFollow"
         tools:layout_editor_absoluteY="560dp" />
 
     <ImageView
